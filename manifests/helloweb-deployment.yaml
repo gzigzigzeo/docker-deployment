@@ -13,7 +13,7 @@ spec:
       labels:
         app: hello
         tier: web
-        version: V1
+        revision: __REVISION__
     spec:
       containers:
       - name: hello-app
