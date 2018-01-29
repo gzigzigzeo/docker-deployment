@@ -13,6 +13,7 @@ spec:
       labels:
         app: hello
         tier: web
+        version: V1
     spec:
       containers:
       - name: hello-app

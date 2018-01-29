@@ -3,6 +3,7 @@
 set -euo pipefail
 
 main() {
+	gcloud docker -- pull gcr.io/mobius-network/hello-app:latest
 	docker build -t gcr.io/mobius-network/hello-app:latest .
 	gcloud docker -- push gcr.io/mobius-network/hello-app:latest
 
