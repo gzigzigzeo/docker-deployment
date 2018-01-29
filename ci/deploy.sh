@@ -8,6 +8,8 @@ main() {
 
 	sed 's/__REVISION__/'"$REVISION"'/g' < manifests/helloweb-deployment.yaml > manifests/helloweb-deployment.yaml
 
+	cat manifests/helloweb-deployment.yaml
+
 	kubectl apply -f manifests/helloweb-deployment.yaml
 	kubectl apply -f manifests/helloweb-service.yaml
 
