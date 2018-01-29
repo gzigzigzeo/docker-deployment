@@ -31,7 +31,7 @@ main() {
 	echo "Configuring kubectl"
 	gcloud container clusters get-credentials hello-cluster \
 		--project "${project}" \
-		--zone europe-west1-b
+		--zone us-central1-b
 }
 
 main "$@"
