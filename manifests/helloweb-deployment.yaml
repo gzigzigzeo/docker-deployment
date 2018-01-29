@@ -1,0 +1,22 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: helloweb
+  labels:
+    app: hello
+spec:
+  replicas: 2
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: hello
+        tier: web
+    spec:
+      containers:
+      - name: hello-app
+        image: gcr.io/mobius-network/hello-app:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
