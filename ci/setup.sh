@@ -29,7 +29,7 @@ main() {
 	gcloud docker --authorize-only --project "${project}"
 
 	echo "Configuring kubectl"
-	gcloud container clusters get-credentials demo \
+	gcloud container clusters get-credentials hello-cluster \
 		--project "${project}" \
 		--zone europe-west1-b
 }
